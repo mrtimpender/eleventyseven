@@ -1,0 +1,52 @@
+$grid-gutter: 2%;
+
+.row {
+	width: 85%;
+	max-width: 1100px;
+	margin: 0 auto;
+	@include clearfix;
+
+	&.row{
+		width: 100%;
+		max-width: 100%;
+
+	}
+}
+
+.column {
+	float: left;
+	margin-right: $grid-gutter;
+
+	&.half {
+		width: (100% - ($grid-gutter * 1)) / 2;
+	}
+
+	&.third {
+		width: (100% - ($grid-gutter * 2)) / 3;
+	}
+
+	&.fourth {
+		width: (100% - ($grid-gutter * 3)) / 4;
+	}
+
+	&.fifth {
+		width: (100% - ($grid-gutter * 4)) / 5;
+	}
+
+	&.twothirds {
+		width: (100% - (2 * ($grid-gutter * 2)) / 3);
+	}
+
+	&.threefourths{
+		widows: (100%-(3 * ($grid-gutter * 3)) / 4);
+	}
+
+	&:last-of-type {
+		margin-right: 0;
+	}
+
+	@include breakpoint(phone) {
+		width: 100% !important;
+		margin-right: 0;
+	}
+}
